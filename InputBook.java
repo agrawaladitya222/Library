@@ -3,12 +3,24 @@ import javax.swing.*;
 import BreezySwing.*;
 
 public class InputBook extends GBDialog {
+	JLabel titlelabel = addLabel("Title:",1,1,1,1);
+	JTextField titlebox = addTextField("",1,2,1,1);
+	JLabel authorlabel = addLabel("Author:",2,1,1,1);
+	JTextField authorbox = addTextField("",2,2,1,1);
+	JButton input = addButton("Input Book",3,1,1,1);
+	Library library = new Library();
 	public InputBook(JFrame parent) {
 		super(parent);
 		setTitle("Input Book");
-		setSize(300,100);
+		setSize(500,200);
 		setVisible(true);
 	}
 
+	public void buttonClicked(JButton button) {
+		if(button == input) {
+			library.enterbook(titlebox.getText(),authorbox.getText());
+			
+		}
+	}
 
 }

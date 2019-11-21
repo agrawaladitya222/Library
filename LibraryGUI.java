@@ -34,25 +34,18 @@ public class LibraryGUI extends GBFrame {
 	public void buttonClicked(JButton button) {
 		if(button==inputbook) {
 			InputBook inputDIE = new InputBook(this);
-			inputDIE.setVisible(true);
-		}
-		if(button==outputall) {
-			
-		}
-		if(button==search) {
-			
-		}
-		if(button==loanout) {
-			
-		}
-		if(button==returnbook) {
-			
-		}
-		if(button==outputloaned) {
-			
-		}
-		if(button==outputoverdue) {
-			
+		}else if(button==outputall) {
+			OutputAll outputallDIE = new OutputAll(this);
+		}else if(button==search) {
+			Search searchDIE = new Search(this);
+		}else if(button==loanout) {
+			LoanOut loanoutDIE = new LoanOut(this);
+		}else if(button==returnbook) {
+			ReturnBook returnbookDIE = new ReturnBook(this);
+		}else if(button==outputloaned) {
+			OutputLoaned outputloanedDIE = new OutputLoaned(this);
+		}else if(button==outputoverdue) {
+			OutputOverdue outputoverdueDIE = new OutputOverdue(this);
 		}
 	}
 	
