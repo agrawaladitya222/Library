@@ -18,4 +18,12 @@ public class Library {
 		dateborrowed.add(null);
 
 	}
+	
+	public String getAllBooks() {
+		String output = "";
+		for(int i=0; i<title.size(); i++) {
+			output = title.get(i) + "\tby " + author.get(i) + "\n";
+		}
+		return output;
+	}
 }
