@@ -16,14 +16,21 @@ public class Library {
 		author.add(b);
 		borrower.add(null);
 		dateborrowed.add(null);
-
+		//System.out.println(title);
+	//	System.out.println(author);
+		
 	}
 	
 	public String getAllBooks() {
 		String output = "";
+		
+		//System.out.println(title);
+		//System.out.println(title.size());
+		
 		for(int i=0; i<title.size(); i++) {
-			output = title.get(i) + "\tby " + author.get(i) + "\n";
+			output =output + title.get(i) + "\tby " + author.get(i) + "\n";
 		}
+		//System.out.println(output);
 		return output;
 	}
 }

@@ -12,6 +12,7 @@ public class LibraryGUI extends GBFrame {
 	private JButton returnbook;
 	private JButton outputloaned;
 	private JButton outputoverdue;
+	public static Library l  = new Library();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
