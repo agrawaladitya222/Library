@@ -16,21 +16,36 @@ public class Library {
 		author.add(b);
 		borrower.add(null);
 		dateborrowed.add(null);
-		//System.out.println(title);
-	//	System.out.println(author);
+		
 		
 	}
 	
 	public String getAllBooks() {
 		String output = "";
 		
-		//System.out.println(title);
-		//System.out.println(title.size());
 		
 		for(int i=0; i<title.size(); i++) {
 			output =output + title.get(i) + "\tby " + author.get(i) + "\n";
 		}
-		//System.out.println(output);
+	
+		return output;
+	}
+	
+	public String search(String a) {
+		String output="";
+		for(int i=0; i<title.size(); i++) {
+			if(a.equalsIgnoreCase(title.get(i))) {
+				output = output + title.get(i) + "\tby " + author.get(i) + "\n";
+				
+				if(borrower.get(i) == null) {
+					output = output + "Currently in Library\n";
+				}else {
+					output = output + "Borrower: " + borrower.get(i) + "\tDate Borrowed: " + dateborrowed.get(i) + "\n";
+				}
+				
+			}
+		}
+		
 		return output;
 	}
 }
