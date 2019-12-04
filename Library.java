@@ -48,4 +48,25 @@ public class Library {
 		
 		return output;
 	}
+	
+	public boolean checkLoaned(String t, String a) {
+		boolean loaned=true;
+		for(int i=0; i<title.size(); i++){
+			if(t.equalsIgnoreCase(title.get(i)) && a.equalsIgnoreCase(author.get(i)) && borrower.get(i)==null) {
+				loaned = false;
+			}
+		}
+		return loaned;
+	}
+	
+	public void loanBook(String t, String a, String bn, String bd) {
+		for(int i=0; i<title.size(); i++){
+			if(t.equalsIgnoreCase(title.get(i)) && a.equalsIgnoreCase(author.get(i)) && borrower.get(i)==null) {
+				borrower.set(i,bn);
+				dateborrowed.set(i,bd);
+			}
+		}
+		
+	}
+	
 }
