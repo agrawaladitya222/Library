@@ -5,7 +5,9 @@ public class Library {
 	private ArrayList<String> title = new ArrayList<String>();
 	private ArrayList<String> author = new ArrayList<String>();
 	private ArrayList<String> borrower = new ArrayList<String>();
-	private ArrayList<String> dateborrowed = new ArrayList<String>();
+	private ArrayList<Integer> day = new ArrayList<Integer>();
+	private ArrayList<Integer> month = new ArrayList<Integer>();
+	private ArrayList<Integer> year = new ArrayList<Integer>();
 	
 	public Library() {
 		
@@ -15,7 +17,9 @@ public class Library {
 		title.add(a);
 		author.add(b);
 		borrower.add(null);
-		dateborrowed.add(null);
+		day.add(00);
+		month.add(00);
+		year.add(0000);
 		
 		
 	}
@@ -40,7 +44,7 @@ public class Library {
 				if(borrower.get(i) == null) {
 					output = output + "Currently in Library\n";
 				}else {
-					output = output + "Borrower: " + borrower.get(i) + "\tDate Borrowed: " + dateborrowed.get(i) + "\n";
+					output = output + "Borrower: " + borrower.get(i) + "\tDate Borrowed: " + month.get(i) + "/" + day.get(i) + "/" + year.get(i) +  "\n";
 				}
 				
 			}
@@ -63,7 +67,8 @@ public class Library {
 		for(int i=0; i<title.size(); i++){
 			if(t.equalsIgnoreCase(title.get(i)) && a.equalsIgnoreCase(author.get(i)) && borrower.get(i)==null) {
 				borrower.set(i,bn);
-				dateborrowed.set(i,bd);
+				
+				//dateborrowed.set(i,bd);
 			}
 		}
 		

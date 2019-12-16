@@ -7,9 +7,10 @@ public class LoanOut extends GBDialog{
 		setTitle("Loan Out");
 		setSize(500,700);
 		setVisible(true);
-		borrowernamebox.setEnabled(false);
+		borrowernamebox.setEditable(false);
 		datebox.setEnabled(false);
 		loanout.setEnabled(false);
+		revalidate();
 	}
 	
 	private JLabel titlelab = addLabel("Title:",1,1,1,1);
@@ -23,6 +24,9 @@ public class LoanOut extends GBDialog{
 	private JButton search = addButton("Search",3,1,1,1);
 	private JButton loanout = addButton("Loan Out", 6,1,1,1);
 	private JButton reset = addButton("Reset",6,2,1,1);
+	
+	
+	
 	
 	public void buttonClicked(JButton button) {
 		if(button == search) {
